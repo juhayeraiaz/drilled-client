@@ -113,7 +113,7 @@ const Signup = () => {
                                 </label>
                             </div>
                             {signInError}
-                            <input className='w-full px-6 py-3 my-4 rounded-lg bg-sky-500 transition hover:bg-sky-600 focus:bg-sky-600 active:bg-sky-800' type="submit" value="Sign Up" />
+                            <input className='w-full px-6 py-3 my-4 rounded-lg btn btn-outline' type="submit" value="Sign Up" />
                         </form>
                         <Link to='/login' className='text-sm'>Already a user?</Link>
                         <div className='divider my-8 lg:mt-12'>OR</div>

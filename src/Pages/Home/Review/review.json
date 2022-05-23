@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Specialty Drill bits",
+        "description": "Special Drilling tools to drill more typical things. Comes in four shapes",
+        "img": "https://www.boschtools.com/us/en/ocsmedia/optimized/q300/Specialty_Drill_Bits_Cat_Image.png",
+        "quantity": "200000",
+        "price": "3"
+    },
+    {
+        "name": "Twist Drill bits",
+        "description": "Twist drill bits are basically the normal drill bits we use for house and floors",
+        "img": "https://www.boschtools.com/us/en/ocsmedia/optimized/q300/Twist_Drill_Bits_Cat_Image.png",
+        "quantity": "200000",
+        "price": "2"
+    },
+    {
+        "name": "Wood Drill Bits",
+        "description": "Wood drilling bits are for drilling woods. Get your accurate shape everytime",
+        "img": "https://www.boschtools.com/us/en/ocsmedia/optimized/q300/Wood_Drilling_Bits_Cat_Image.png",
+        "quantity": "200000",
+        "price": "4"
+    }
+]

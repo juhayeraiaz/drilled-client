@@ -116,7 +116,7 @@ const Login = () => {
                                 </label>
                             </div>
                             {signInError}
-                            <input className='w-full px-6 py-3 my-4 rounded-lg bg-sky-500 transition hover:bg-sky-600 focus:bg-sky-600 active:bg-sky-800' type="submit" value="Login" />
+                            <input className='w-full px-6 py-3 my-4 rounded-lg btn btn-outline' type="submit" value="Login" />
                         </form>
                         <Link to='/signup' className='text-sm'>Create a New Account</Link>
                     </div>

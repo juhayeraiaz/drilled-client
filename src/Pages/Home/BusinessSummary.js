@@ -3,7 +3,7 @@ import React from 'react';
 const BusinessSummary = () => {
     return (
         <>
-            <div class="mx-auto container my-20 lg:mt-48 lg:mb-24">
+            <div class="mx-auto container lg:mt-12 lg:mb-8">
                 <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                     <div class="flex justify-center w-full lg:border-r border-gray-300 py-6">
                         <svg xmlns="http://www.w3.org/2000/svg" width="64" height="69" viewBox="0 0 64 69" fill="none">
