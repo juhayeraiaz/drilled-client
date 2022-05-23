@@ -41,7 +41,6 @@ const Signup = () => {
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
-        console.log('update done');
     }
     return (
         <div>
@@ -60,7 +59,7 @@ const Signup = () => {
                                     type="text"
                                     placeholder="Enter Full name"
                                     className="w-full py-3 px-6 ring-1 ring-gray-300 rounded-lg placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
-                                    {...register("name", {
+                                    {...register("displayName", {
                                         required: {
                                             value: true,
                                             message: 'Name is Required'
