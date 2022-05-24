@@ -59,12 +59,14 @@ const ItemDetail = () => {
                 refetch();
                 event.target.reset();
             })
+        const totalPrice = parseInt(quantityInput * item.price)
         const purchased = {
-            name: user.displayName,
-            email: user.email,
+            buyerName: data.Name,
+            buyer: user.email,
             address: data.Address,
             mobileNumber: data.mobileNumber,
-            quantity: data.quantity
+            quantity: data.quantity,
+            price: totalPrice
         }
         fetch('http://localhost:5000/purchased', {
             method: 'POST',
@@ -97,7 +99,7 @@ const ItemDetail = () => {
                     <p className='font-bold'>Price: ${item.price}</p>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input type="text" placeholder={user.displayName} {...register("Name", {})} disabled className='bg-gray-50 border border-gray-300 rounded-lg w-full p-2.5 mb-4 placeholder-gray-900 block' />
+                    <input type="text" placeholder='Full name' {...register("Name", {})} className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4' />
                     <input type="text" placeholder={user.email} disabled {...register("Email", {})} className='bg-gray-50 border border-gray-300 rounded-lg w-full p-2.5 mb-4 placeholder-gray-900 block' />
                     <input type="tel" placeholder="mobileNumber" {...register("mobileNumber", {
                         required: {
