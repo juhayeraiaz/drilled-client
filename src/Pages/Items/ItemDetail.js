@@ -89,18 +89,18 @@ const ItemDetail = () => {
     };
     return (
         <div className='py-20 px-8'>
-            <div className='mt-4 rounded-2xl shadow-2xl p-6 gap-6 bg-neutral w-[150] lg:w-[1350px] mx-auto flex flex-col lg:flex-row items-center'>
+            <div className='mt-4 rounded-2xl shadow-2xl p-6 gap-6 bg-neutral lg:w-[1350px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center'>
                 <img className='w-80 lg:w-[380px] bg-white p-6 rounded-xl' src={item.img} alt="" />
                 <div className='flex flex-col items-center justify-center text-center gap-4'>
                     <h3 className='font-bold text-xl mt-3'>{item.name}</h3>
-                    <p className='text-center w-2/3'>{item.description}</p>
+                    <p className='text-center'>{item.description}</p>
                     <p className='font-medium'>Available Quantity: {item.quantity}</p>
                     <p className='font-medium'>Must buy quantity: 50</p>
                     <p className='font-bold'>Price: ${item.price}</p>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input type="text" placeholder='Full name' {...register("Name", {})} className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4' />
-                    <input type="text" placeholder={user.email} disabled {...register("Email", {})} className='bg-gray-50 border border-gray-300 rounded-lg w-full p-2.5 mb-4 placeholder-gray-900 block' />
+                    <input type="text" placeholder='Full name' {...register("Name", {})} className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4 max-w-xs' />
+                    <input type="text" placeholder={user.email} disabled {...register("Email", {})} className='bg-gray-50 border border-gray-300 rounded-lg w-full p-2.5 mb-4 placeholder-gray-900 block max-w-xs' />
                     <input type="tel" placeholder="mobileNumber" {...register("mobileNumber", {
                         required: {
                             value: true,
@@ -108,12 +108,12 @@ const ItemDetail = () => {
                         },
                         minLength: 6, maxLength: 12
                     })}
-                        className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4' />
+                        className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4 max-w-xs' />
                     <label className="label">
                         {errors.mobileNumber?.type === 'required' && <span className="label-text-alt text-red-500">{errors.mobileNumber.message}</span>}
                     </label>
-                    <input type="text" placeholder="address" {...register("Address", {})} className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4' />
-                    <input type="number" onKeyUp={getInput} name='number' {...register("quantity", {})} className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4' required />
+                    <input type="text" placeholder="address" {...register("Address", {})} className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4 max-w-xs' />
+                    <input type="number" onKeyUp={getInput} name='number' {...register("quantity", {})} className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4 max-w-xs' required />
                     <input type="submit" value='Buy Now' className='btn btn-outline' disabled={error} />
                 </form>
             </div>

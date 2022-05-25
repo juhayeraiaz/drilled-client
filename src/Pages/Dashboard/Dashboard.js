@@ -22,7 +22,8 @@ const Dashboard = () => {
                     {admin ? <></> : <li><Link to='/dashboard/review' className='font-bold'>Add a Review</Link></li>}
                     {admin ? <></> : <li><Link to='/dashboard/orders' className='font-bold'>My Orders</Link></li>}
                     {admin && <li><Link to='/dashboard/user' className='font-bold'>All Users</Link></li>}
-                    {admin && <li><Link to='/dashboard/addProduct' className='font-bold'>Add a product</Link></li>}
+                    {admin && <li><Link to='/dashboard/addProduct' className='font-bold'>Add a item</Link></li>}
+                    {admin && <li><Link to='/dashboard/deleteproduct' className='font-bold'>Manage items</Link></li>}
                     {admin && <li><Link to='/dashboard/manageorders' className='font-bold'>Manage all orders</Link></li>}
                 </ul>
 
