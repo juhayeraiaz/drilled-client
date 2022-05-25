@@ -24,7 +24,7 @@ const BusinessSummary = () => {
                         </svg>
                         <div class="w-1/2 pl-12">
                             <h1 class="font-bold text-2xl lg:text-5xl tracking-1px">100+</h1>
-                            <h2 class="text-base lg:text-lg mt-4 leading-8 tracking-wide">Insurance Solutions</h2>
+                            <h2 class="text-base lg:text-lg mt-4 leading-8 tracking-wide">Delivery Vans</h2>
                         </div>
                     </div>
                     <div class="flex justify-center w-full lg:border-r border-gray-300 py-6">
@@ -53,8 +53,8 @@ const BusinessSummary = () => {
                             <path d="M10.5 25.45L2 20.8438" stroke="#805AD5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                         <div class="w-1/2 pl-12">
-                            <h1 class="font-bold text-2xl lg:text-5xl tracking-1px">530k</h1>
-                            <h2 class="text-base lg:text-lg mt-4 leading-8 tracking-wide">Projects Completed</h2>
+                            <h1 class="font-bold text-2xl lg:text-5xl tracking-1px">3k+</h1>
+                            <h2 class="text-base lg:text-lg mt-4 leading-8 tracking-wide">Outlets</h2>
                         </div>
                     </div>
                 </div>

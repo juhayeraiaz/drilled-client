@@ -1,7 +1,7 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const Modal = ({ deleting, setDeleting, refetch }) => {
+const DeleteModal = ({ deleting, setDeleting, refetch }) => {
     const { buyerName, _id } = deleting;
 
     const handleDelete = () => {
@@ -23,14 +23,14 @@ const Modal = ({ deleting, setDeleting, refetch }) => {
     }
     return (
         <div>
-            <input type="checkbox" id="delete-confirm-modal" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
+            <input type="checkbox" id="delete-confirm-modal" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box">
                     <h2 className='text-2xl font-bold'>Hey {buyerName.toUpperCase()} </h2>
-                    <h3 class="font-bold text-lg">Are you sure you want to delete <span className=' text-error'>{_id}</span></h3>
+                    <h3 className="font-bold text-lg">Are you sure you want to delete <span className=' text-error'>{_id}</span></h3>
                     <div class="modal-action">
-                        <button onClick={() => handleDelete()} class="btn btn-xs btn-error">Delete</button>
-                        <label for="delete-confirm-modal" class="btn btn-xs">Cancel</label>
+                        <button onClick={() => handleDelete()} className="btn btn-xs btn-error">Delete</button>
+                        <label htmlFor="delete-confirm-modal" className="btn btn-xs">Cancel</label>
                     </div>
                 </div>
             </div>
@@ -38,4 +38,4 @@ const Modal = ({ deleting, setDeleting, refetch }) => {
     );
 };
 
-export default Modal;
+export default DeleteModal;

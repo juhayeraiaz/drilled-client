@@ -5,7 +5,7 @@ import { useQuery } from 'react-query';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading';
-import Modal from './Modal';
+import DeleteModal from './DeleteModal';
 
 const MyOrders = () => {
     const [deleting, setDeleting] = useState(null);
@@ -87,9 +87,9 @@ const MyOrders = () => {
                     </table>
                 </div>
             </div>{deleting &&
-                <Modal deleting={deleting}
+                <DeleteModal deleting={deleting}
                     setDeleting={setDeleting}
-                    refetch={refetch}></Modal>}
+                    refetch={refetch}></DeleteModal>}
         </div>
     );
 };

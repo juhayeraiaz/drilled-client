@@ -29,7 +29,6 @@ const MyProfile = () => {
                 console.log(data);
             })
         reset()
-        refetch()
     }
 
     const { data: users, isLoading, refetch } = useQuery('users', () => fetch(`http://localhost:5000/user/${user.email}`, {
@@ -39,6 +38,7 @@ const MyProfile = () => {
         }
     }).then(res => res.json()))
     console.log(users)
+    refetch()
     if (isLoading) {
         return <Loading></Loading>
     }
@@ -53,7 +53,7 @@ const MyProfile = () => {
                     <h1 className='text-2xl my-1'>Address :  {users?.address}</h1>
                     <h1 className='text-2xl my-1'>Education :  {users?.education}</h1>
                     <h1 className='text-2xl my-1'>Mobile Number :  {users?.mobileNumber}</h1>
-                    <a className='text-2xl my-1 font-medium' href={users?.linkedin}>Linkedin link</a>
+                    <a className='text-2xl my-1 font-medium' href={users?.linkedin} target={'blank'}>Linkedin link</a>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)} className='my-6 card card-body shadow-lg bg-neutral'>
                     <input type="tel" placeholder="Mobile Number" className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4 my-3' {...register("mobileNumber", { required: true, maxLength: 12 })} />
