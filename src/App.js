@@ -17,6 +17,7 @@ import MyProfile from './Pages/Dashboard/MyProfile';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import Payment from './Pages/Dashboard/Payment';
 import Users from './Pages/Dashboard/Users';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import RequireAdmin from './Login/RequireAdmin';
 
 function App() {
@@ -27,8 +28,8 @@ function App() {
         <Route path='/login' element={<Login></Login>} />
         <Route path='/signup' element={<Signup></Signup>} />
         <Route path='/items' element={<Items></Items>}></Route>
+        <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/items/:id' element={<RequireAuth><ItemDetail></ItemDetail></RequireAuth>}></Route>
-
         <Route path='dashboard' element={
           <RequireAuth>
             <Dashboard />
@@ -38,7 +39,7 @@ function App() {
           <Route path='review' element={<MyReview></MyReview>}></Route>
           <Route path="orders" element={<MyOrders></MyOrders>}></Route>
           <Route path="payment/:id" element={<Payment></Payment>}></Route>
-          <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+          <Route path="user" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
         </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>

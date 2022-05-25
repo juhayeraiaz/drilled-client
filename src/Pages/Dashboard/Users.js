@@ -1,18 +1,19 @@
-import React from 'react';
-import { useQuery } from 'react-query';
-import Loading from '../../Shared/Loading';
+import React, { useEffect, useState } from 'react';
 import UserRow from './UserRow';
 
 const Users = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
-        method: 'GET',
-        headers: {
-            authorization: `Bearer ${localStorage.getItem('accessToken')}`
-        }
-    }).then(res => res.json()))
-    if (isLoading) {
-        return <Loading></Loading>
-    }
+    const [users, setUsers] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/user', {
+            method: 'GET',
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        }).then(res => res.json())
+            .then(data => {
+                setUsers(data)
+            })
+    }, [users])
     return (
         <div>
             <h2 className="text-2xl">All Users: {users.length}</h2>
@@ -31,7 +32,6 @@ const Users = () => {
                             users.map((user, index) => <UserRow
                                 key={user._id}
                                 user={user}
-                                refetch={refetch}
                                 index={index}
                             ></UserRow>)
                         }

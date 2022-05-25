@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../Images/drilled.png'
 import google from '../Images/social/google.png'
 import github from '../Images/social/github.png'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
 import { useForm } from 'react-hook-form';
@@ -22,9 +22,11 @@ const Signup = () => {
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const [token] = useToken(user || gUser || gitUser);
 
-    const navigate = useNavigate();
 
     let signInError;
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     if (loading || gLoading || gitLoading || updating) {
         return <Loading></Loading>
@@ -35,7 +37,7 @@ const Signup = () => {
     }
 
     if (token) {
-        navigate('/');
+        navigate(from, { replace: true });
     }
 
     const onSubmit = async data => {
