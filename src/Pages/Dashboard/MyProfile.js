@@ -17,7 +17,7 @@ const MyProfile = () => {
             education: data.education,
             linkedin: data.linkedinLink
         }
-        fetch(`http://localhost:5000/user/${user.email}`, {
+        fetch(`https://driller-tools.herokuapp.com/user/${user.email}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -31,7 +31,7 @@ const MyProfile = () => {
         reset()
     }
 
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch(`http://localhost:5000/user/${user.email}`, {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch(`https://driller-tools.herokuapp.com/user/${user.email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

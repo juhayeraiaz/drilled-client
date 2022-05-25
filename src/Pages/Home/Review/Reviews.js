@@ -4,7 +4,7 @@ import ReviewCard from './ReviewCard';
 
 const Reviews = () => {
 
-    const { data: reviews, isLoading, refetch } = useQuery('reviews', () => fetch('http://localhost:5000/reviews',)
+    const { data: reviews, isLoading, refetch } = useQuery('reviews', () => fetch('https://driller-tools.herokuapp.com/reviews',)
         .then(res => res.json()))
     refetch()
     if (isLoading) {

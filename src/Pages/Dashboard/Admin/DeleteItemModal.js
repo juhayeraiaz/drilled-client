@@ -5,7 +5,7 @@ const DeleteItemModal = ({ deleting, setDeleting }) => {
     const { name, _id } = deleting;
 
     const handleDelete = () => {
-        fetch(`http://localhost:5000/items/${_id}`, {
+        fetch(`https://driller-tools.herokuapp.com/items/${_id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

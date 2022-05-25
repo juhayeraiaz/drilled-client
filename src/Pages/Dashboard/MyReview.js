@@ -16,7 +16,7 @@ const MyReview = () => {
             description: data.description,
             rating: rating
         }
-        fetch(`http://localhost:5000/reviews`, {
+        fetch(`https://driller-tools.herokuapp.com/reviews`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

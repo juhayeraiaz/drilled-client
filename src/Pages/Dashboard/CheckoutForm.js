@@ -14,7 +14,7 @@ const CheckoutForm = ({ purchase }) => {
     console.log(purchase)
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://driller-tools.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -81,7 +81,7 @@ const CheckoutForm = ({ purchase }) => {
                 purchased: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`http://localhost:5000/purchased/${_id}`, {
+            fetch(`https://driller-tools.herokuapp.com/purchased/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

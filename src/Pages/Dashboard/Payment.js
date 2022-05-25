@@ -10,7 +10,7 @@ const stripePromise = loadStripe('pk_test_51L1Bs9DHKmO0atUrFj6SHR8MfrhZW9diDNPmT
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/purchased/${id}`;
+    const url = `https://driller-tools.herokuapp.com/purchased/${id}`;
 
     const { data: purchase, isLoading } = useQuery(['purchased', id], () => fetch(url, {
         method: 'GET',
