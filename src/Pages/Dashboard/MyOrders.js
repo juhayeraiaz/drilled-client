@@ -72,9 +72,13 @@ const MyOrders = () => {
                                         </div>}
                                     </td>
                                     <td>
-                                        {(a.price && a.paid) && <div>
+                                        {a.delivery && <div>
                                             <span className='text-success'>Pending</span> <br />
                                             <p className='tooltip' data-tip={a.transactionId}>Transaction: {a.transactionId.slice(0, 6)}...</p>
+                                        </div>}
+                                        {!a.paid && <div> <span className='text-error'>Pay First!!</span> </div>}
+                                        {(a.paid && !a.delivery) && <div>
+                                            <span className='text-success'>Delivered</span>
                                         </div>}
                                     </td>
                                 </tr>)

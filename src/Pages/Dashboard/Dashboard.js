@@ -19,7 +19,7 @@ const Dashboard = () => {
                 <ul className="menu p-4 lg:p-12 overflow-y-auto w-80 bg-neutral text-base-content">
                     {/* <!-- Sidebar content here --> */}
                     <li><Link to='/dashboard' className='font-bold'>My Profile</Link></li>
-                    {admin ? <></> : <li><Link to='/dashboard/review' className='font-bold'>My Reviews</Link></li>}
+                    {admin ? <></> : <li><Link to='/dashboard/review' className='font-bold'>Add a Review</Link></li>}
                     {admin ? <></> : <li><Link to='/dashboard/orders' className='font-bold'>My Orders</Link></li>}
                     {admin && <li><Link to='/dashboard/users' className='font-bold'>All Users</Link></li>}
                     {admin && <li><Link to='/dashboard/addProduct' className='font-bold'>Add a product</Link></li>}
