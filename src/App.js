@@ -3,6 +3,8 @@ import './App.css';
 import Login from './Login/Login';
 import RequireAuth from './Login/RequireAuth';
 import Signup from './Login/Signup';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Home from './Pages/Home/Home';
 import ItemDetail from './Pages/Items/ItemDetail';
 import Items from './Pages/Items/Items';
@@ -23,8 +25,12 @@ import ManageAllOrders from './Pages/Dashboard/Admin/ManageAllOrders';
 import AddProduct from './Pages/Dashboard/Admin/AddProduct';
 import Teams from './Pages/Teams/Teams';
 import DeleteProduct from './Pages/Dashboard/Admin/DeleteProduct';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <Navbar>
       <Routes>

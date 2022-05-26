@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const DeliverModal = ({ deliver, setDeliver }) => {
     const { buyerName, _id } = deliver;
@@ -16,7 +17,8 @@ const DeliverModal = ({ deliver, setDeliver }) => {
             body: JSON.stringify(deliveryStatus)
         }).then(res => res.json())
             .then(data => {
-                console.log(data);
+                setDeliver(null)
+                toast.success('Items Delivered')
             })
     }
     return (

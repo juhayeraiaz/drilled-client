@@ -5,7 +5,14 @@ import './Banner.css'
 const Banner = () => {
     return (
         <div className='mb-16'>
-            <div className=''>
+            <div data-aos="fade-right"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top-center">
                 <div class="carousel w-full h-[300px] lg:h-[650px]">
                     <div id="slide1" class="carousel-item relative w-full ">
                         <div className='banner-img-1 text-white text-center'>
