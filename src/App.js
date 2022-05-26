@@ -26,6 +26,8 @@ import AddProduct from './Pages/Dashboard/Admin/AddProduct';
 import Teams from './Pages/Teams/Teams';
 import DeleteProduct from './Pages/Dashboard/Admin/DeleteProduct';
 import { useEffect } from 'react';
+import RequireUser from './Login/RequireUser';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   useEffect(() => {
@@ -39,6 +41,7 @@ function App() {
         <Route path='/signup' element={<Signup></Signup>} />
         <Route path='/items' element={<Items></Items>}></Route>
         <Route path='team' element={<Teams></Teams>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/items/:id' element={<RequireAuth><ItemDetail></ItemDetail></RequireAuth>}></Route>
         <Route path='dashboard' element={
@@ -47,8 +50,8 @@ function App() {
           </RequireAuth>
         } >
           <Route index element={<MyProfile></MyProfile>}></Route>
-          <Route path='review' element={<MyReview></MyReview>}></Route>
-          <Route path="orders" element={<MyOrders></MyOrders>}></Route>
+          <Route path='review' element={<RequireUser><MyReview></MyReview></RequireUser>}></Route>
+          <Route path="orders" element={<RequireUser><MyOrders></MyOrders></RequireUser>}></Route>
           <Route path="payment/:id" element={<Payment></Payment>}></Route>
           <Route path='manageorders' element={<RequireAdmin><ManageAllOrders></ManageAllOrders></RequireAdmin>}></Route>
           <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>

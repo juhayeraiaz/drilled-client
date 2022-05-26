@@ -9,12 +9,12 @@ import simplyQr from '../../Images/portfolio/qrcode_simply-recipes.png'
 const MyPortfolio = () => {
     return (
         <div className='my-20 text-center p-8'>
-            <h1 className='text-6xl font-bold my-4'>My portfolio</h1>
-            <h1 className='text-2xl font-medium mt-8'>My name is: Juhayer Ayaz</h1>
-            <h1 className=' text-2xl font-medium my-4'>Email:
-                <a href="mailto:aiazj97@gmail.com" className="hover:text-cyan-400 transition"> aiazj97@gmail.com</a></h1>
-            <h1 className='text-2xl font-medium my-4'>Education: Diploma in CSE</h1>
-            <div>
+            <h1 className='text-6xl font-bold mb-4'>My portfolio</h1>
+            <div className='card card-body shadow-xl bg-neutral'>
+                <h1 className='text-2xl font-medium mt-8'>My name is: Juhayer Ayaz</h1>
+                <h1 className=' text-2xl font-medium my-4'>Email:
+                    <a href="mailto:aiazj97@gmail.com" className="hover:text-cyan-400 transition"> aiazj97@gmail.com</a></h1>
+                <h1 className='text-2xl font-medium my-4'>Education: Diploma in CSE</h1>
                 <div>
                     <h1 className='text-3xl font-bold my-8'>My Skills</h1>
                     <div className="gap-8 sm:grid sm:grid-cols-2">

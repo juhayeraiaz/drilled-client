@@ -31,7 +31,7 @@ const MyReview = () => {
     }
     return (
         <div>
-            <h1>My Reviews</h1>
+            <h1 className='text-3xl font-bold'>Add a Review</h1>
             <div className='w-1/2 mx-auto'>
                 <form onSubmit={handleSubmit(onSubmit)} className='my-6 card card-body shadow-lg bg-neutral'>
                     <input required className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4 my-3' type="text" placeholder="name" {...register("name", {})} />
