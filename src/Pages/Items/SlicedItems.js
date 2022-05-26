@@ -14,7 +14,7 @@ const SlicedItems = () => {
             data-aos-easing="ease-in-out"
             data-aos-mirror="true"
             data-aos-once="false"
-            data-aos-anchor-placement="top-center"
+            data-aos-anchor-placement="top"
         >
             <div className="my-16">
                 <h1 className='text-4xl font-bold pb-6'>Our Items</h1>
