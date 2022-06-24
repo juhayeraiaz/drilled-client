@@ -4,7 +4,7 @@ import Teams from '../Teams/Teams';
 import Banner from './Banner';
 import BusinessSummary from './BusinessSummary';
 import Career from './Career';
-import Reviews from './Review/Reviews';
+import SwiperReview from './Review/SwiperReview';
 
 const Home = () => {
     return (
@@ -12,7 +12,7 @@ const Home = () => {
             <Banner></Banner>
             <SlicedItems></SlicedItems>
             <BusinessSummary></BusinessSummary>
-            <Reviews></Reviews>
+            <SwiperReview></SwiperReview>
             <Teams></Teams>
             <Career></Career>
         </div>
