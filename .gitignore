@@ -23,5 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # extra
-/Reviews.js
-/ReviewCard.js
+Reviews.js
+ReviewCard.js
