@@ -8,6 +8,7 @@ import auth from '../firebase.init';
 import { useForm } from 'react-hook-form';
 import Loading from '../Shared/Loading';
 import useToken from '../Shared/Hooks/useToken';
+import { toast } from 'react-toastify';
 const Signup = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
@@ -44,6 +45,14 @@ const Signup = () => {
         await createUserWithEmailAndPassword(data.email, data.password, data.displayName);
         await updateProfile({ displayName: data.displayName });
     }
+    function copy(text) {
+        navigator.clipboard.writeText(text)
+        toast.success('Text Copied!')
+    }
+    const adminUserName = 'hero@zero.com';
+    const adminPassword = '123456';
+    const userName = 'user2@gmail.com';
+    const userPassword = '123456';
     return (
         <div>
             <div className="flex items-center justify-center">
@@ -133,7 +142,29 @@ const Signup = () => {
                                 </div>
                             </button>
                         </div>
+                        <div className='my-12'>
+                            <label htmlFor="admin-modal" className="btn modal-button ml-12">Admin credential</label>
+                            <label htmlFor="user-modal" className="btn modal-button ml-12">User credential</label>
+                        </div>
                     </div>
+                    <input type="checkbox" id="admin-modal" className="modal-toggle" />
+                    <label htmlFor="admin-modal" className="modal cursor-pointer">
+                        <label className="modal-box relative" for="">
+                            <div className="mockup-code">
+                                <pre><code>{adminUserName}</code> <button className='text-gray-300 float-right' onClick={() => copy(adminUserName)}>Copy</button></pre>
+                                <pre className="text-warning"><code>{adminPassword}</code> <button className='text-gray-300 float-right' onClick={() => copy(adminPassword)}>Copy</button></pre>
+                            </div>
+                        </label>
+                    </label>
+                    <input type="checkbox" id="user-modal" className="modal-toggle" />
+                    <label htmlFor="user-modal" className="modal cursor-pointer">
+                        <label className="modal-box relative" for="">
+                            <div className="mockup-code">
+                                <pre><code>{userName}</code> <button className='text-gray-300 float-right' onClick={() => copy(userName)}>Copy</button></pre>
+                                <pre className="text-warning"><code>{userPassword}</code> <button className='text-gray-300 float-right' onClick={() => copy(userPassword)}>Copy</button></pre>
+                            </div>
+                        </label>
+                    </label>
                 </div>
             </div>
         </div>

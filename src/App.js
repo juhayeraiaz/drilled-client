@@ -27,7 +27,6 @@ import Teams from './Pages/Teams/Teams';
 import DeleteProduct from './Pages/Dashboard/Admin/DeleteProduct';
 import { useEffect } from 'react';
 import RequireUser from './Login/RequireUser';
-import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   useEffect(() => {
@@ -41,7 +40,6 @@ function App() {
         <Route path='/signup' element={<Signup></Signup>} />
         <Route path='/items' element={<Items></Items>}></Route>
         <Route path='team' element={<Teams></Teams>}></Route>
-        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/items/:id' element={<RequireAuth><ItemDetail></ItemDetail></RequireAuth>}></Route>
         <Route path='dashboard' element={
