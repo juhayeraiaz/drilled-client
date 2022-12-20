@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const UserRow = ({ user, index }) => {
     const { email, role } = user;
     const makeAdmin = () => {
-        fetch(`https://driller-tools.herokuapp.com/user/admin/${email}`, {
+        fetch(`https://drilled-tools.onrender.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -24,7 +24,7 @@ const UserRow = ({ user, index }) => {
 
     }
     const deleteUser = () => {
-        fetch(`https://driller-tools.herokuapp.com/user/${email}`, {
+        fetch(`https://drilled-tools.onrender.com/user/${email}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -46,8 +46,8 @@ const UserRow = ({ user, index }) => {
         <tr>
             <th>{index + 1}</th>
             <td>{email}</td>
-            <td>{role !== 'admin' ? <button onClick={makeAdmin} class="btn btn-xs btn-success">Make Admin</button> : <p className='text-success'>Admin</p>}</td>
-            <td>{role !== 'admin' ? <button onClick={deleteUser} class="btn btn-xs btn-error">Remove User</button> : <p className='text-error'>Cant remove admin</p>}</td>
+            <td>{role !== 'admin' ? <button onClick={makeAdmin} className="btn btn-xs btn-success">Make Admin</button> : <p className='text-success'>Admin</p>}</td>
+            <td>{role !== 'admin' ? <button onClick={deleteUser} className="btn btn-xs btn-error">Remove User</button> : <p className='text-error'>Cant remove admin</p>}</td>
         </tr>
     );
 };

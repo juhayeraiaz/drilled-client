@@ -5,7 +5,7 @@ const DeleteModal = ({ deleting, setDeleting, refetch }) => {
     const { buyerName, _id } = deleting;
 
     const handleDelete = () => {
-        fetch(`https://driller-tools.herokuapp.com/purchased/${_id}`, {
+        fetch(`https://drilled-tools.onrender.com/purchased/${_id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -28,7 +28,7 @@ const DeleteModal = ({ deleting, setDeleting, refetch }) => {
                 <div className="modal-box">
                     <h2 className='text-2xl font-bold'>Hey {buyerName.toUpperCase()} </h2>
                     <h3 className="font-bold text-lg">Are you sure you want to delete <span className=' text-error'>{_id}</span></h3>
-                    <div class="modal-action">
+                    <div className="modal-action">
                         <button onClick={() => handleDelete()} className="btn btn-xs btn-error">Delete</button>
                         <label htmlFor="delete-confirm-modal" className="btn btn-xs">Cancel</label>
                     </div>

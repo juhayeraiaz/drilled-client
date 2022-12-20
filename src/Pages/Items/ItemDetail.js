@@ -13,7 +13,7 @@ const ItemDetail = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     // getting items
     const { data: item, isLoading, refetch } = useQuery(['items', user], () =>
-        fetch(`https://driller-tools.herokuapp.com/items/${id}`)
+        fetch(`https://drilled-tools.onrender.com/items/${id}`)
             .then(res => res.json())
     )
 
@@ -46,7 +46,7 @@ const ItemDetail = () => {
         const updatedItems = { quantity };
 
         // send data to the server
-        const url = `https://driller-tools.herokuapp.com/items/${id}`;
+        const url = `https://drilled-tools.onrender.com/items/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -68,7 +68,7 @@ const ItemDetail = () => {
             quantity: data.quantity,
             price: totalPrice
         }
-        fetch('https://driller-tools.herokuapp.com/purchased', {
+        fetch('https://drilled-tools.onrender.com/purchased', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

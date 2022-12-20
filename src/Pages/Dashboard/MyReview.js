@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import ReactStars from 'react-rating-stars-component';
 
 const MyReview = () => {
-    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const [rating, setRating] = useState(0);
 
     const ratingChanged = (event) => {
@@ -16,7 +16,7 @@ const MyReview = () => {
             description: data.description,
             rating: rating
         }
-        fetch(`https://driller-tools.herokuapp.com/reviews`, {
+        fetch(`https://drilled-tools.onrender.com/reviews`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

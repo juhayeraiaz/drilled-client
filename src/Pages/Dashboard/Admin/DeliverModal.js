@@ -8,7 +8,7 @@ const DeliverModal = ({ deliver, setDeliver }) => {
         const deliveryStatus = {
             delivery: false
         }
-        fetch(`https://driller-tools.herokuapp.com/purchased/${_id}`, {
+        fetch(`https://drilled-tools.onrender.com/purchased/${_id}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

@@ -149,7 +149,7 @@ const Signup = () => {
                     </div>
                     <input type="checkbox" id="admin-modal" className="modal-toggle" />
                     <label htmlFor="admin-modal" className="modal cursor-pointer">
-                        <label className="modal-box relative" for="">
+                        <label className="modal-box relative" htmlFor="">
                             <div className="mockup-code">
                                 <pre><code>{adminUserName}</code> <button className='text-gray-300 float-right' onClick={() => copy(adminUserName)}>Copy</button></pre>
                                 <pre className="text-warning"><code>{adminPassword}</code> <button className='text-gray-300 float-right' onClick={() => copy(adminPassword)}>Copy</button></pre>
@@ -158,7 +158,7 @@ const Signup = () => {
                     </label>
                     <input type="checkbox" id="user-modal" className="modal-toggle" />
                     <label htmlFor="user-modal" className="modal cursor-pointer">
-                        <label className="modal-box relative" for="">
+                        <label className="modal-box relative" htmlFor="">
                             <div className="mockup-code">
                                 <pre><code>{userName}</code> <button className='text-gray-300 float-right' onClick={() => copy(userName)}>Copy</button></pre>
                                 <pre className="text-warning"><code>{userPassword}</code> <button className='text-gray-300 float-right' onClick={() => copy(userPassword)}>Copy</button></pre>

@@ -8,7 +8,7 @@ const ManageAllOrders = () => {
     const [bookings, setBookings] = useState([]);
 
     useEffect(() => {
-        fetch('https://driller-tools.herokuapp.com/purchases', {
+        fetch('https://drilled-tools.onrender.com/purchases', {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

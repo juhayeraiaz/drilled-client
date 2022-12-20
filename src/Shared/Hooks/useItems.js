@@ -4,7 +4,7 @@ const useItems = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch('https://driller-tools.herokuapp.com/items')
+        fetch('https://drilled-tools.onrender.com/items')
             .then(res => res.json())
             .then(data => setItems(data));
     }, [items]);

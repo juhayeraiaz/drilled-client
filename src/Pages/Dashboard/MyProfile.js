@@ -8,7 +8,7 @@ import Loading from '../../Shared/Loading';
 
 const MyProfile = () => {
     const [user] = useAuthState(auth);
-    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = async (data, event) => {
         const updatedUser = {
             email: user.email,
@@ -17,7 +17,7 @@ const MyProfile = () => {
             education: data.education,
             linkedin: data.linkedinLink
         }
-        fetch(`https://driller-tools.herokuapp.com/user/${user.email}`, {
+        fetch(`https://drilled-tools.onrender.com/user/${user.email}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -31,13 +31,12 @@ const MyProfile = () => {
         reset()
     }
 
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch(`https://driller-tools.herokuapp.com/user/${user.email}`, {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch(`https://drilled-tools.onrender.com/user/${user.email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
     }).then(res => res.json()))
-    console.log(users)
     refetch()
     if (isLoading) {
         return <Loading></Loading>

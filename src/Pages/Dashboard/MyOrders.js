@@ -13,7 +13,7 @@ const MyOrders = () => {
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
 
-    const { isLoading, refetch } = useQuery('bookings', () => fetch(`https://driller-tools.herokuapp.com/purchased?buyer=${user.email}`, {
+    const { isLoading, refetch } = useQuery('bookings', () => fetch(`https://drilled-tools.onrender.com/purchased?buyer=${user.email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

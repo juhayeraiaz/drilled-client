@@ -7,7 +7,7 @@ const useToken = user => {
         const name = user?.user?.displayName;
         const currentUser = { email: email, name: name };
         if (email) {
-            fetch(`https://driller-tools.herokuapp.com/user/${email}`, {
+            fetch(`https://drilled-tools.onrender.com/user/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

@@ -14,7 +14,7 @@ const CheckoutForm = ({ purchase }) => {
     console.log(purchase)
 
     useEffect(() => {
-        fetch('https://driller-tools.herokuapp.com/create-payment-intent', {
+        fetch('https://drilled-tools.onrender.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -48,7 +48,7 @@ const CheckoutForm = ({ purchase }) => {
             type: 'card',
             card
         });
-
+        console.log(paymentMethod)
         setCardError(error?.message || '')
         setSuccess('');
         setProcessing(true);
@@ -81,7 +81,7 @@ const CheckoutForm = ({ purchase }) => {
                 purchased: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://driller-tools.herokuapp.com/purchased/${_id}`, {
+            fetch(`https://drilled-tools.onrender.com/purchased/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
@@ -93,9 +93,9 @@ const CheckoutForm = ({ purchase }) => {
                     setProcessing(false);
                     console.log(data);
                 })
-
         }
     }
+    console.log(processing);
     return (
         <>
             <form onSubmit={handleSubmit}>

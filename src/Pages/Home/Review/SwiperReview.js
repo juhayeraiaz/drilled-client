@@ -16,7 +16,7 @@ const SwiperReview = () => {
     const [allReviews, setAllReviews] = useState([]);
     const [sortedReview, setSortedReview] = useState([]);
     useEffect(() => {
-        fetch("https://driller-tools.herokuapp.com/reviews")
+        fetch("https://drilled-tools.onrender.com/reviews")
             .then((res) => res.json())
             .then((data) => setAllReviews(data));
     }, []);
@@ -84,7 +84,7 @@ const SwiperReview = () => {
                                         ? r.description
                                         : r.description.slice(0, 108) + "..."}
                                 </p>
-                                <div class="absolute bottom-4">
+                                <div className="absolute bottom-4">
                                     <ReactStars
                                         edit={false}
                                         count={5}

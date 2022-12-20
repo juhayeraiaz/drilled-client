@@ -10,7 +10,7 @@ const stripePromise = loadStripe('pk_test_51L1Bs9DHKmO0atUrFj6SHR8MfrhZW9diDNPmT
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `https://driller-tools.herokuapp.com/purchased/${id}`;
+    const url = `https://drilled-tools.onrender.com/purchased/${id}`;
 
     const { data: purchase, isLoading } = useQuery(['purchased', id], () => fetch(url, {
         method: 'GET',
@@ -26,15 +26,15 @@ const Payment = () => {
 
     return (
         <div className='flex items-center justify-center flex-col'>
-            <div class="card w-full max-w-md bg-base-100 shadow-xl my-12">
-                <div class="card-body">
+            <div className="card w-full max-w-md bg-base-100 shadow-xl my-12">
+                <div className="card-body">
                     <p className="text-success font-bold">Hello, {purchase.buyerName}</p>
-                    <h2 class="card-title">Please Pay for {purchase._id}</h2>
+                    <h2 className="card-title">Please Pay for {purchase._id}</h2>
                     <p>Please pay: ${purchase.price}</p>
                 </div>
             </div>
-            <div class="card flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100">
-                <div class="card-body">
+            <div className="card flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100">
+                <div className="card-body">
                     <Elements stripe={stripePromise}>
                         <CheckoutForm purchase={purchase} />
                     </Elements>

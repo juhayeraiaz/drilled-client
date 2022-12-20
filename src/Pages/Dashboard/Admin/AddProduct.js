@@ -28,7 +28,7 @@ const AddProduct = () => {
                         img: img
                     }
                     // send to your database 
-                    fetch('https://driller-tools.herokuapp.com/items', {
+                    fetch('https://drilled-tools.onrender.com/items', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

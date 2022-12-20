@@ -31,19 +31,19 @@ const Footer = () => {
                                         <h6 className="text-lg font-medium text-white">Categories</h6>
                                         <ul className="list-inside mt-4 space-y-4">
                                             <li>
-                                                <a href="#" className="hover:text-cyan-400 transition">About</a>
+                                                <a href="#/" className="hover:text-cyan-400 transition">About</a>
                                             </li>
                                             <li>
-                                                <a href="#" className="hover:text-cyan-400 transition">Customers</a>
+                                                <a href="#/" className="hover:text-cyan-400 transition">Customers</a>
                                             </li>
                                             <li>
-                                                <a href="#" className="hover:text-cyan-400 transition">Enterprise</a>
+                                                <a href="#/" className="hover:text-cyan-400 transition">Enterprise</a>
                                             </li>
                                             <li>
-                                                <a href="#" className="hover:text-cyan-400 transition">Partners</a>
+                                                <a href="#/" className="hover:text-cyan-400 transition">Partners</a>
                                             </li>
                                             <li>
-                                                <a href="#" className="hover:text-cyan-400 transition">Jobs</a>
+                                                <a href="#/" className="hover:text-cyan-400 transition">Jobs</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -51,38 +51,38 @@ const Footer = () => {
                                         <h6 className="text-lg font-medium text-white">Products</h6>
                                         <ul className="list-inside mt-4 space-y-4">
                                             <li>
-                                                <a href="#" className="hover:text-cyan-400 transition">About</a>
+                                                <a href="#/" className="hover:text-cyan-400 transition">About</a>
                                             </li>
                                             <li>
-                                                <a href="#" className="hover:text-cyan-400 transition">Customers</a>
+                                                <a href="#/" className="hover:text-cyan-400 transition">Customers</a>
                                             </li>
                                             <li>
-                                                <a href="#" className="hover:text-cyan-400 transition">Enterprise</a>
+                                                <a href="#/" className="hover:text-cyan-400 transition">Enterprise</a>
                                             </li>
                                             <li>
-                                                <a href="#" className="hover:text-cyan-400 transition">Partners</a>
+                                                <a href="#/" className="hover:text-cyan-400 transition">Partners</a>
                                             </li>
                                             <li>
-                                                <a href="#" className="hover:text-cyan-400 transition">Jobs</a>
+                                                <a href="#/" className="hover:text-cyan-400 transition">Jobs</a>
                                             </li>
                                         </ul>
                                     </div><div>
                                         <h6 className="text-lg font-medium text-white">Ressources</h6>
                                         <ul className="list-inside mt-4 space-y-4">
                                             <li>
-                                                <a href="#" className="hover:text-cyan-400 transition">About</a>
+                                                <a href="#/" className="hover:text-cyan-400 transition">About</a>
                                             </li>
                                             <li>
-                                                <a href="#" className="hover:text-cyan-400 transition">Customers</a>
+                                                <a href="#/" className="hover:text-cyan-400 transition">Customers</a>
                                             </li>
                                             <li>
-                                                <a href="#" className="hover:text-cyan-400 transition">Enterprise</a>
+                                                <a href="#/" className="hover:text-cyan-400 transition">Enterprise</a>
                                             </li>
                                             <li>
-                                                <a href="#" className="hover:text-cyan-400 transition">Partners</a>
+                                                <a href="#/" className="hover:text-cyan-400 transition">Partners</a>
                                             </li>
                                             <li>
-                                                <a href="#" className="hover:text-cyan-400 transition">Jobs</a>
+                                                <a href="#/" className="hover:text-cyan-400 transition">Jobs</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -97,7 +97,7 @@ const Footer = () => {
                                             </li>
                                             <li>
                                                 <form action="">
-                                                    <label for="newsletter" className="text-lg text-white">Subscribe to our newsletter</label>
+                                                    <label htmlFor="newsletter" className="text-lg text-white">Subscribe to our newsletter</label>
                                                     <div className="relative mt-4">
                                                         <input type="email" name="newsletter" id="newsletter" placeholder="Your email" className="w-full px-4 py-3 ring-1 ring-cyan-700 rounded-xl bg-gray-900 bg-opacity-20 invalid:ring-red-400 invalid:outline-none" />
                                                         <button type="submit" title="Submit" className="absolute right-0 w-max py-3 px-6 text-center rounded-r-xl transition bg-cyan-400 hover:bg-cyan-300 active:bg-cyan-600 focus:bg-cyan-300">
