@@ -9,10 +9,10 @@ const Item = ({ item }) => {
         navigate(`/items/${id}`);
     }
     return (
-        <div className='rounded-2xl hover:scale-110 transition delay-150 duration-300 ease-in-out shadow-md p-6 gap-6 bg-neutral flex flex-col items-center justify-center w-[350px] mx-auto'>
-            <img className='w-60 h-30 bg-white p-8 rounded-xl' src={img} alt="" />
+        <div className='rounded-2xl transition delay-150 duration-300 ease-in-out shadow-md p-6 gap-1 bg-neutral flex flex-col w-[350px] mx-auto'>
+            <img className='w-72 h-48 rounded-md' src={img} alt="" />
             <h3 className='font-bold text-xl mt-3'>{name}</h3>
-            <p className='text-center'>{description}</p>
+            <p className='text-base font-light'>{description}</p>
             <p className='font-medium'>Available Quantity: {quantity}</p>
             <p className='font-bold'>Price: ${price}</p>
             <button onClick={() => navigateToItemDetail(_id)} className='btn btn-outline'>Buy Now: {name}</button>

@@ -32,28 +32,24 @@ const SwiperReview = () => {
             <div className="flex items-center justify-center  pb-4 ">
                 <h1 className='text-center text-3xl font-bold my-2'>User Reviews ({allReviews.length})</h1>
             </div>
-            <div className="container">
+            <div className="px-5 lg:px-10">
                 <Swiper
-                    slidesPerView={1}
+                    slidesPerView={2}
                     spaceBetween={10}
                     pagination={{
                         clickable: true,
                     }}
                     autoplay={true}
                     breakpoints={{
-                        "@0.00": {
+                        425: {
                             slidesPerView: 1,
                             spaceBetween: 10,
                         },
-                        "@0.75": {
-                            slidesPerView: 1,
-                            spaceBetween: 10,
-                        },
-                        "@1.00": {
+                        750: {
                             slidesPerView: 2,
                             spaceBetween: 10,
                         },
-                        "@1.50": {
+                        1024: {
                             slidesPerView: 3,
                             spaceBetween: 10,
                         },
@@ -63,7 +59,7 @@ const SwiperReview = () => {
                 >
                     {sortedReview.map((r) => (
                         <SwiperSlide key={r._id}>
-                            <div className="p-5 rounded-xl h-52 md:w-[370px] mx-auto bg-white relative">
+                            <div className="p-5 rounded-xl h-52 md:w-[300px] lg:w-[250px] xl:w-[350px] mx-auto bg-white relative">
                                 <div className="flex items-center  gap-5">
                                     <img src={img} className="w-16 h-16" alt="" />
                                     <div className="h">
@@ -79,10 +75,10 @@ const SwiperReview = () => {
                                     </div>
                                 </div>
 
-                                <p className="mt-4 text-gray-500 text-sm">
+                                <p className="mt-4 text-gray-500 text-sm lg:truncate xl:overflow-visible xl:text-clip xl:whitespace-pre-wrap">
                                     {r.description.length < 110
                                         ? r.description
-                                        : r.description.slice(0, 108) + "..."}
+                                        : r.description.slice(0, 95) + "..."}
                                 </p>
                                 <div className="absolute bottom-4">
                                     <ReactStars

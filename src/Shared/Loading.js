@@ -1,9 +1,10 @@
 import React from 'react';
+import { PropagateLoader } from 'react-spinners';
 
 const Loading = () => {
     return (
         <div className="flex items-center justify-center ">
-            <div className="w-16 h-16 border-b-2 border-gray-900 rounded-full animate-spin"></div>
+            <PropagateLoader color="#36d7b7" />
         </div>
     );
 };
